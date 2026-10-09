@@ -1,0 +1,23 @@
+pypdf==5.1.0 # A lightweight, pure-Python library to extract text and page numbers from PDFs. We avoid heavyweight OCR or bloated packages until we actually need them.
+langchain-text-splitters==0.3.5 #Provides proven character/token splitting logic (RecursiveCharacterTextSplitter) without dragging in all of LangChain's heavy integrations.
+sentence-transformers
+qdrant-client rank-bm25
+google-generativeai
+
+
+# sentence-transformers: Runs a local neural network embedding model (all-MiniLM-L6-v2) on your CPU/GPU. No API rate limits or costs.
+# qdrant-client: High-performance vector database. It supports local on-disk or in-memory vector storage without needing Docker or a cloud server.
+# rank-bm25: The standard BM25 algorithm for lexical/keyword retrieval.
+# google-generativeai: Google's Gemini SDK for answering clinical questions grounded strictly on retrieved chunks.
+
+pypdf>=5.1.0
+langchain-text-splitters>=0.3.5
+sentence-transformers>=3.0.0
+qdrant-client>=1.11.0
+rank-bm25>=0.2.2
+google-genai>=0.1.0
+google-generativeai>=0.8.0
+networkx>=3.2.0
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+streamlit>=1.38.0

@@ -1,0 +1,19 @@
+# Virtual Environments
+.renv/
+venv/
+env/
+ENV/
+# Secrets & Environment Variables (NEVER COMMIT API KEYS!)
+.env
+.env.local
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+# Local Vector Database & Raw Models
+qdrant_db/
+models/
+# OS Specific
+.DS_Store
+Thumbs.db

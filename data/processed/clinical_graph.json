@@ -1,0 +1,180 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "entity_type": "Drug",
+      "id": "Metformin"
+    },
+    {
+      "entity_type": "SideEffect",
+      "id": "Lactic Acidosis"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Alogliptin And Metformin"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Alogliptin"
+    },
+    {
+      "entity_type": "Condition",
+      "id": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "entity_type": "Condition",
+      "id": "Type 1 Diabetes Mellitus"
+    },
+    {
+      "entity_type": "Condition",
+      "id": "Severe Renal Impairment"
+    },
+    {
+      "entity_type": "Condition",
+      "id": "Metabolic Acidosis"
+    },
+    {
+      "entity_type": "Condition",
+      "id": "Diabetic Ketoacidosis"
+    },
+    {
+      "entity_type": "SideEffect",
+      "id": "Hypersensitivity"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Carbionic Anhydrase Inhibitors"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Ranolazine"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Vandetanib"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Dolutegravir"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Cimetidine"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Alcohol"
+    },
+    {
+      "entity_type": "SideEffect",
+      "id": "Metformin Accumulation"
+    },
+    {
+      "entity_type": "Drug",
+      "id": "Warfarin"
+    },
+    {
+      "entity_type": "SideEffect",
+      "id": "Calciphylaxis"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "CAUSES",
+      "source": "Metformin",
+      "target": "Lactic Acidosis"
+    },
+    {
+      "relation": "CONTRAINDICATIONS_IN",
+      "source": "Metformin",
+      "target": "Severe Renal Impairment"
+    },
+    {
+      "relation": "CONTRAINDICATIONS_IN",
+      "source": "Metformin",
+      "target": "Metabolic Acidosis"
+    },
+    {
+      "relation": "CONTRAINDICATIONS_IN",
+      "source": "Metformin",
+      "target": "Diabetic Ketoacidosis"
+    },
+    {
+      "relation": "CONTRAINDICATIONS_IN",
+      "source": "Metformin",
+      "target": "Hypersensitivity"
+    },
+    {
+      "relation": "TREATS",
+      "source": "Alogliptin And Metformin",
+      "target": "Type 2 Diabetes Mellitus"
+    },
+    {
+      "relation": "CONTRAINDICATIONS_IN",
+      "source": "Alogliptin And Metformin",
+      "target": "Type 1 Diabetes Mellitus"
+    },
+    {
+      "relation": "CONTRAINDICATIONS_IN",
+      "source": "Alogliptin",
+      "target": "Hypersensitivity"
+    },
+    {
+      "relation": "CAUSES",
+      "source": "Carbionic Anhydrase Inhibitors",
+      "target": "Lactic Acidosis"
+    },
+    {
+      "relation": "INTERACTS_WITH",
+      "source": "Ranolazine",
+      "target": "Metformin"
+    },
+    {
+      "relation": "CAUSES",
+      "source": "Ranolazine",
+      "target": "Metformin Accumulation"
+    },
+    {
+      "relation": "INTERACTS_WITH",
+      "source": "Vandetanib",
+      "target": "Metformin"
+    },
+    {
+      "relation": "CAUSES",
+      "source": "Vandetanib",
+      "target": "Metformin Accumulation"
+    },
+    {
+      "relation": "INTERACTS_WITH",
+      "source": "Dolutegravir",
+      "target": "Metformin"
+    },
+    {
+      "relation": "CAUSES",
+      "source": "Dolutegravir",
+      "target": "Metformin Accumulation"
+    },
+    {
+      "relation": "INTERACTS_WITH",
+      "source": "Cimetidine",
+      "target": "Metformin"
+    },
+    {
+      "relation": "CAUSES",
+      "source": "Cimetidine",
+      "target": "Metformin Accumulation"
+    },
+    {
+      "relation": "INTERACTS_WITH",
+      "source": "Alcohol",
+      "target": "Metformin"
+    },
+    {
+      "relation": "CAUSES",
+      "source": "Warfarin",
+      "target": "Calciphylaxis"
+    }
+  ]
+}
