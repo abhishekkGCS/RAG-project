@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060.3084166666665 1448.8999999999996" width="1060.3084166666665" height="1448.8999999999996" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<g class="subgraph" data-id="INGESTION" data-label="Phase 1: Ingestion &amp; Normalization">
+  <rect x="73.82899999999995" y="612.2999999999997" width="316.99799999999993" height="521" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="73.82899999999995" y="612.2999999999997" width="316.99799999999993" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="85.82899999999995" y="626.2999999999997" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Phase 1: Ingestion &amp; Normalization</text>
+</g>
+<g class="subgraph" data-id="INDEXING" data-label="Phase 2: Dual Storage &amp; Indexing">
+  <rect x="40" y="1193.2999999999997" width="769.9704999999999" height="215.60000000000002" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="1193.2999999999997" width="769.9704999999999" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="52" y="1207.2999999999997" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Phase 2: Dual Storage &amp; Indexing</text>
+</g>
+<g class="subgraph" data-id="RUNTIME" data-label="Phase 3: Runtime Query &amp; Guardrail Pipeline">
+  <rect x="418.8269999999999" y="40" width="601.4814166666666" height="1099.2999999999997" rx="0" ry="0" fill="var(--_group-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="418.8269999999999" y="40" width="601.4814166666666" height="28" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="430.8269999999999" y="54" font-size="12" font-weight="600" fill="var(--_text-sec)" dy="4.199999999999999">Phase 3: Runtime Query &amp; Guardrail Pipeline</text>
+</g>
+<polyline class="edge" data-from="CHUNKS_JSON" data-to="EMBEDDINGS" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,1120.2999999999997 232.32799999999992,1178.7999999999997 179.23299999999995,1178.7999999999997 179.23299999999995,1237.2999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CHUNKS_JSON" data-to="BM25" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,1120.2999999999997 232.32799999999992,1178.7999999999997 408.8684999999999,1178.7999999999997 408.8684999999999,1237.2999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CHUNKS_JSON" data-to="GRAPH_EXTRACT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,1120.2999999999997 232.32799999999992,1178.7999999999997 667.0324999999999,1178.7999999999997 667.0324999999999,1237.2999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PDF" data-to="LOADER" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,710.0999999999997 232.32799999999992,758.0999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LOADER" data-to="CLEANER" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,811.8999999999997 232.32799999999992,859.8999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CLEANER" data-to="CHUNKER" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,913.6999999999998 232.32799999999992,961.6999999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="CHUNKER" data-to="CHUNKS_JSON" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="232.32799999999992,1015.4999999999998 232.32799999999992,1066.4999999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="EMBEDDINGS" data-to="QDRANT" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="179.23299999999995,1291.0999999999997 179.23299999999998,1339.0999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="GRAPH_EXTRACT" data-to="GRAPH_JSON" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="667.0324999999999,1291.0999999999997 667.0324999999999,1339.0999999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="QUERY" data-to="L1_GUARD" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="589.2576666666665,120.9 589.2576666666665,168.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="L1_GUARD" data-to="BLOCKED" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Malicious Query" points="543.9809999999999,222.70000000000002 543.9809999999999,234.70000000000002 540.6464999999998,234.70000000000002 540.6464999999998,339" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="L1_GUARD" data-to="ROUTER" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Safe Query" points="634.5343333333332,222.70000000000002 634.5343333333332,234.70000000000002 751.7569999999998,234.70000000000002 751.7569999999998,339" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROUTER" data-to="GRAPH_RET" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="GRAPH_ONLY" points="790.4024999999999,392.8 790.4024999999999,404.8 852.0050833333332,404.8 852.0050833333332,594" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROUTER" data-to="FUSION" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="HYBRID_ONLY" points="713.1114999999999,392.8 713.1114999999999,404.8 545.3352499999999,404.8 545.3352499999999,558 546.2657499999999,558 546.2657499999999,594" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="ROUTER" data-to="BOTH" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="FUSED_BOTH" points="751.7569999999998,392.8 751.7569999999998,416.8 694.8129166666665,416.8 694.8129166666665,509.1" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="BOTH" data-to="GRAPH_RET" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="694.8129166666665,546 694.8129166666665,570 815.1264166666665,570 815.1264166666665,594" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="BOTH" data-to="FUSION" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="694.8129166666665,546 694.8129166666665,570 578.8219166666665,570 578.8219166666665,594" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="GRAPH_RET" data-to="L2_GUARD" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="815.1264166666665,647.8 815.1264166666665,671.8 763.1668333333332,671.8 763.1668333333332,695.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="FUSION" data-to="L2_GUARD" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="578.8219166666665,647.8 578.8219166666665,671.8 763.1668333333332,671.8 763.1668333333332,695.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="L2_GUARD" data-to="GEMINI" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="763.1668333333332,749.5999999999999 763.1668333333332,797.5999999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="GEMINI" data-to="L3_GUARD" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="763.1668333333332,851.3999999999999 763.1668333333332,899.3999999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="L3_GUARD" data-to="REJECTED" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Ungrounded Claim" points="711.9621666666665,953.1999999999998 711.9621666666665,965.1999999999998 553.9984166666666,965.1999999999998 553.9984166666666,1066.4999999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="L3_GUARD" data-to="UI" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Verified &amp; Cited" points="814.3714999999999,953.1999999999998 814.3714999999999,965.1999999999998 839.9499166666665,965.1999999999998 839.9499166666665,1066.4999999999998" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="L1_GUARD" data-to="BLOCKED" data-label="Malicious Query">
+  <rect x="493.1464999999999" y="265.70000000000005" width="94.87" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="540.5814999999999" y="280.85" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Malicious Query</text>
+</g>
+<g class="edge-label" data-from="L1_GUARD" data-to="ROUTER" data-label="Safe Query">
+  <rect x="716.2569999999998" y="265.70000000000005" width="70.51599999999999" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="751.5149999999999" y="280.85" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Safe Query</text>
+</g>
+<g class="edge-label" data-from="ROUTER" data-to="GRAPH_RET" data-label="GRAPH_ONLY">
+  <rect x="808.0050833333332" y="435.8" width="87.74199999999999" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="851.8760833333332" y="450.95" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">GRAPH_ONLY</text>
+</g>
+<g class="edge-label" data-from="ROUTER" data-to="FUSION" data-label="HYBRID_ONLY">
+  <rect x="499.83524999999986" y="435.8" width="90.118" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="544.8942499999998" y="450.95" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">HYBRID_ONLY</text>
+</g>
+<g class="edge-label" data-from="ROUTER" data-to="BOTH" data-label="FUSED_BOTH">
+  <rect x="650.8129166666665" y="435.8" width="87.74199999999999" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="694.6839166666665" y="450.95" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">FUSED_BOTH</text>
+</g>
+<g class="edge-label" data-from="L3_GUARD" data-to="REJECTED" data-label="Ungrounded Claim">
+  <rect x="501.99841666666657" y="996.1999999999998" width="103.78000000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="553.8884166666666" y="1011.3499999999998" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Ungrounded Claim</text>
+</g>
+<g class="edge-label" data-from="L3_GUARD" data-to="UI" data-label="Verified &amp; Cited">
+  <rect x="795.9499166666666" y="996.1999999999998" width="87.74200000000002" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="839.8209166666666" y="1011.3499999999998" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Verified &amp; Cited</text>
+</g>
+<g class="node" data-id="PDF" data-label="FDA DailyMed PDFs
+(Warfarin, Metformin, etc.)" data-shape="rectangle">
+  <rect x="137.99399999999991" y="656.2999999999997" width="188.668" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="232.32799999999992" y="683.1999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="232.32799999999992" dy="-3.9000000000000012">FDA DailyMed PDFs</tspan><tspan x="232.32799999999992" dy="16.900000000000002">(Warfarin, Metformin, etc.)</tspan></text>
+</g>
+<g class="node" data-id="LOADER" data-label="loader.py
+Page-Level Text Extraction" data-shape="rectangle">
+  <rect x="130.95449999999994" y="758.0999999999997" width="202.74699999999996" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="232.32799999999992" y="784.9999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="232.32799999999992" dy="-3.9000000000000012">loader.py</tspan><tspan x="232.32799999999992" dy="16.900000000000002">Page-Level Text Extraction</tspan></text>
+</g>
+<g class="node" data-id="CLEANER" data-label="cleaner.py
+Medical Casing &amp; Unit Normalizer" data-shape="rectangle">
+  <rect x="115.39349999999995" y="859.8999999999997" width="233.86899999999994" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="232.32799999999992" y="886.7999999999997" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="232.32799999999992" dy="-3.9000000000000012">cleaner.py</tspan><tspan x="232.32799999999992" dy="16.900000000000002">Medical Casing &amp; Unit Normalizer</tspan></text>
+</g>
+<g class="node" data-id="CHUNKER" data-label="chunker.py
+FDA SPL Section State-Machine Chunker" data-shape="rectangle">
+  <rect x="89.82899999999995" y="961.6999999999998" width="284.99799999999993" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="232.32799999999992" y="988.5999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="232.32799999999992" dy="-3.9000000000000012">chunker.py</tspan><tspan x="232.32799999999992" dy="16.900000000000002">FDA SPL Section State-Machine Chunker</tspan></text>
+</g>
+<g class="node" data-id="CHUNKS_JSON" data-label="data/processed/chunks.json
+(446 Structured Chunks)" data-shape="rectangle">
+  <rect x="126.13799999999995" y="1066.4999999999998" width="212.37999999999994" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="232.32799999999992" y="1093.3999999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="232.32799999999992" dy="-3.9000000000000012">data/processed/chunks.json</tspan><tspan x="232.32799999999992" dy="16.900000000000002">(446 Structured Chunks)</tspan></text>
+</g>
+<g class="node" data-id="EMBEDDINGS" data-label="embeddings.py
+all-MiniLM-L6-v2 (384-dim)" data-shape="rectangle">
+  <rect x="80.82349999999998" y="1237.2999999999997" width="196.81899999999996" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="179.23299999999995" y="1264.1999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="179.23299999999995" dy="-3.9000000000000012">embeddings.py</tspan><tspan x="179.23299999999995" dy="16.900000000000002">all-MiniLM-L6-v2 (384-dim)</tspan></text>
+</g>
+<g class="node" data-id="QDRANT" data-label="vector_store.py
+Local Qdrant DB (Payload Indexed)" data-shape="rectangle">
+  <rect x="56" y="1339.0999999999997" width="246.46599999999995" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="179.23299999999998" y="1365.9999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="179.23299999999998" dy="-3.9000000000000012">vector_store.py</tspan><tspan x="179.23299999999998" dy="16.900000000000002">Local Qdrant DB (Payload Indexed)</tspan></text>
+</g>
+<g class="node" data-id="BM25" data-label="bm25.py
+Inverted Index (BM25 Okapi)" data-shape="rectangle">
+  <rect x="305.6425" y="1237.2999999999997" width="206.45199999999994" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="408.8684999999999" y="1264.1999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="408.8684999999999" dy="-3.9000000000000012">bm25.py</tspan><tspan x="408.8684999999999" dy="16.900000000000002">Inverted Index (BM25 Okapi)</tspan></text>
+</g>
+<g class="node" data-id="GRAPH_EXTRACT" data-label="extractor.py
+Pydantic Structured LLM Extraction" data-shape="rectangle">
+  <rect x="540.0944999999999" y="1237.2999999999997" width="253.87599999999995" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="667.0324999999999" y="1264.1999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="667.0324999999999" dy="-3.9000000000000012">extractor.py</tspan><tspan x="667.0324999999999" dy="16.900000000000002">Pydantic Structured LLM Extraction</tspan></text>
+</g>
+<g class="node" data-id="GRAPH_JSON" data-label="data/processed/clinical_graph.json
+(NetworkX DiGraph)" data-shape="rectangle">
+  <rect x="540.8354999999999" y="1339.0999999999997" width="252.39399999999992" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="667.0324999999999" y="1365.9999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="667.0324999999999" dy="-3.9000000000000012">data/processed/clinical_graph.json</tspan><tspan x="667.0324999999999" dy="16.900000000000002">(NetworkX DiGraph)</tspan></text>
+</g>
+<g class="node" data-id="QUERY" data-label="Clinician Query" data-shape="rectangle">
+  <rect x="523.4521666666665" y="84" width="131.611" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="589.2576666666664" y="102.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Clinician Query</text>
+</g>
+<g class="node" data-id="L1_GUARD" data-label="guardrails/input_guard.py
+Layer 1: Injection Detector &amp; Risk Triage" data-shape="rectangle">
+  <rect x="453.42766666666654" y="168.9" width="271.65999999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="589.2576666666665" y="195.8" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="589.2576666666665" dy="-3.9000000000000012">guardrails/input_guard.py</tspan><tspan x="589.2576666666665" dy="16.900000000000002">Layer 1: Injection Detector &amp; Risk Triage</tspan></text>
+</g>
+<g class="node" data-id="BLOCKED" data-label="🛑 Security Alert Interception" data-shape="rectangle">
+  <rect x="434.8269999999999" y="339" width="211.639" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="540.6464999999998" y="357.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🛑 Security Alert Interception</text>
+</g>
+<g class="node" data-id="ROUTER" data-label="agents/router.py
+Query Intent Router" data-shape="rectangle">
+  <rect x="674.4659999999999" y="339" width="154.582" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="751.7569999999998" y="365.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="751.7569999999998" dy="-3.9000000000000012">agents/router.py</tspan><tspan x="751.7569999999998" dy="16.900000000000002">Query Intent Router</tspan></text>
+</g>
+<g class="node" data-id="GRAPH_RET" data-label="graph/retriever.py
+Multi-Hop Subgraph Traversal" data-shape="rectangle">
+  <rect x="704.4904166666665" y="594" width="221.27199999999996" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="815.1264166666665" y="620.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="815.1264166666665" dy="-3.9000000000000012">graph/retriever.py</tspan><tspan x="815.1264166666665" dy="16.900000000000002">Multi-Hop Subgraph Traversal</tspan></text>
+</g>
+<g class="node" data-id="FUSION" data-label="retrieval/fusion.py
+Dense + BM25 (RRF k=60)" data-shape="rectangle">
+  <rect x="481.15341666666654" y="594" width="195.33699999999996" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="578.8219166666665" y="620.9" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="578.8219166666665" dy="-3.9000000000000012">retrieval/fusion.py</tspan><tspan x="578.8219166666665" dy="16.900000000000002">Dense + BM25 (RRF k=60)</tspan></text>
+</g>
+<g class="node" data-id="BOTH" data-label="Dual Retrieval Engine" data-shape="rectangle">
+  <rect x="610.8529166666665" y="509.1" width="167.92" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="694.8129166666665" y="527.5500000000001" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Dual Retrieval Engine</text>
+</g>
+<g class="node" data-id="L2_GUARD" data-label="guardrails/retrieval_guard.py
+Layer 2: Untrusted XML Evidence Boundary" data-shape="rectangle">
+  <rect x="611.7758333333333" y="695.8" width="302.7819999999999" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="763.1668333333332" y="722.6999999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="763.1668333333332" dy="-3.9000000000000012">guardrails/retrieval_guard.py</tspan><tspan x="763.1668333333332" dy="16.900000000000002">Layer 2: Untrusted XML Evidence Boundary</tspan></text>
+</g>
+<g class="node" data-id="GEMINI" data-label="Google Gemini 2.5 Flash
+Grounded Clinical Reasoning" data-shape="rectangle">
+  <rect x="656.9768333333332" y="797.5999999999999" width="212.37999999999997" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="763.1668333333331" y="824.4999999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="763.1668333333331" dy="-3.9000000000000012">Google Gemini 2.5 Flash</tspan><tspan x="763.1668333333331" dy="16.900000000000002">Grounded Clinical Reasoning</tspan></text>
+</g>
+<g class="node" data-id="L3_GUARD" data-label="guardrails/output_guard.py
+Layer 3: Hallucination Gate &amp; Citation Checker" data-shape="rectangle">
+  <rect x="609.5528333333332" y="899.3999999999999" width="307.22799999999995" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="763.1668333333332" y="926.2999999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="763.1668333333332" dy="-3.9000000000000012">guardrails/output_guard.py</tspan><tspan x="763.1668333333332" dy="16.900000000000002">Layer 3: Hallucination Gate &amp; Citation Checker</tspan></text>
+</g>
+<g class="node" data-id="REJECTED" data-label="🛑 Output Safety Warning" data-shape="rectangle">
+  <rect x="460.40541666666655" y="1066.4999999999998" width="187.18599999999998" height="36.900000000000006" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="553.9984166666666" y="1084.9499999999998" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">🛑 Output Safety Warning</text>
+</g>
+<g class="node" data-id="UI" data-label="app.py (Streamlit UI)
+Verified Clinical Response + Provenance Drawer" data-shape="rectangle">
+  <rect x="675.5914166666665" y="1066.4999999999998" width="328.717" height="53.800000000000004" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="839.9499166666665" y="1093.3999999999999" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)"><tspan x="839.9499166666665" dy="-3.9000000000000012">app.py (Streamlit UI)</tspan><tspan x="839.9499166666665" dy="16.900000000000002">Verified Clinical Response + Provenance Drawer</tspan></text>
+</g>
+</svg>
